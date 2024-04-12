@@ -5,15 +5,15 @@ let options =
     headers: { 'X-Api-Key':'pCKeYmBxm0rhAA1nkemWCw==OIGBh8O0sYv49zm2' }
   }
 
-fetch('https://api.api-ninjas.com/v1/cocktail', options)
+fetch('https://api.api-ninjas.com/v1/cats?name=aegean', options)
   .then(response => response.json())
   .then(function(data){ 
-    console.log(data)
+    console.log("apidata",data)
 
-    document.getElementById("info").innerHTML = data[0].origin
+    document.getElementById("api").innerHTML = data[0].origin + "Hej!"
   }
 )
-  .catch(error => console.log(error));
+  .catch(error => console.log("apifel",error));
 
 
 
